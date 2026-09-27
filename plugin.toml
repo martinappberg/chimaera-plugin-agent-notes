@@ -3,7 +3,7 @@
 id = "agent-notes"
 name = "Agent notes"
 # The plugin's own version: the crate's (scripts/build-plugins.sh checks).
-version = "0.1.1"
+version = "0.1.2"
 summary = "Agents leave short notes for each other and for the Mastermind."
 homepage = "https://github.com/martinappberg/chimaera-plugin-agent-notes"
 # The chimaera:plugin WIT version the component targets.
@@ -17,7 +17,7 @@ events = ["hook", "session-ended"]
 
 [adds]
 ui = ["Notes on the Timeline, each with a deliver button"]
-agents = ["2 tools for every agent here: post_note · read_notes", "never starts a turn"]
+agents = ["Agents leave each other short notes on the Timeline: gotchas, blockers, results, questions", "a note never starts anyone's turn"]
 
 # Where releases of this plugin are published: the daemon offers updates from here.
 [release]
