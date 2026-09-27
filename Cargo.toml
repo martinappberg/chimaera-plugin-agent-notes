@@ -1,13 +1,24 @@
 [package]
 name = "chimaera-plugin-agent-notes"
-version.workspace = true
-edition.workspace = true
-license.workspace = true
-repository.workspace = true
-publish.workspace = true
+version = "0.1.0"
+edition = "2021"
+license = "AGPL-3.0-only"
+repository = "https://github.com/martinappberg/chimaera-plugin-agent-notes"
+description = "Agent notes for Chimaera: agents leave short notes for each other and for the Mastermind on the workspace Timeline; a note never starts a turn."
+publish = false
 
 [lib]
 crate-type = ["cdylib"]
 
 [dependencies]
-chimaera-plugin-api.workspace = true
+# The chimaera:plugin WIT world and its Rust bindings, from the daemon's
+# repository, pinned to a commit so a release is reproducible (a crates.io
+# release of the API crate replaces this later).
+chimaera-plugin-api = { git = "https://github.com/martinappberg/chimaera.git", rev = "1121107370e162635b93eff3843f17f32f45f9fc" }
+
+# One small component: the daemon embeds or downloads it.
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
+opt-level = "s"

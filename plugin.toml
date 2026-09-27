@@ -17,3 +17,7 @@ events = ["hook", "session-ended"]
 [adds]
 ui = ["Notes on the Timeline, each with a deliver button"]
 agents = ["2 tools for every agent here: post_note · read_notes", "never starts a turn"]
+
+# Where releases of this plugin are published: the daemon offers updates from here.
+[release]
+github = "martinappberg/chimaera-plugin-agent-notes"
