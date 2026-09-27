@@ -3,8 +3,9 @@
 id = "agent-notes"
 name = "Agent notes"
 # The plugin's own version: the crate's (scripts/build-plugins.sh checks).
-version = "0.1.0"
+version = "0.1.1"
 summary = "Agents leave short notes for each other and for the Mastermind."
+homepage = "https://github.com/martinappberg/chimaera-plugin-agent-notes"
 # The chimaera:plugin WIT version the component targets.
 api = "0.1"
 

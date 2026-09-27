@@ -20,3 +20,8 @@ The host functions and the manifest are documented in Chimaera's [plugin authori
 ## Release
 
 Bump `version` in both `Cargo.toml` and `plugin.toml`, commit, and push a tag `vX.Y.Z`. The release workflow builds the component and publishes `plugin.wasm`, `plugin.toml` and `SHA256SUMS` on the GitHub release; a daemon's update checker reads this repository's latest release.
+
+## Tools
+
+- `post_note {text, to?}` — a note on the workspace Timeline for a session (its id), the Mastermind (`"mastermind"`), or everyone. Never starts a turn.
+- `read_notes {all?}` — the notes left for you that you have not read yet.
