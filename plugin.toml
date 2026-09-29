@@ -3,13 +3,20 @@
 id = "agent-notes"
 name = "Agent notes"
 # The plugin's own version: the crate's (scripts/build-plugins.sh checks).
-version = "0.1.3"
+version = "0.1.4"
 summary = "Agents leave short notes for each other and for the Mastermind."
 # A few plain sentences for the card, in the plugin author's words.
 description = "Agent notes gives the agents in a workspace a place to leave each other short notes on the Timeline: a gotcha, a blocker, a result someone can build on, a question about a shared decision. A note never starts anyone's turn; each agent reads its notes when it starts work or when a hook says some are waiting, and you can deliver a note to a session yourself from the Timeline. Nothing leaves the workspace."
 homepage = "https://github.com/martinappberg/chimaera-plugin-agent-notes"
 # The chimaera:plugin WIT version the component targets.
 api = "0.1"
+
+# What it reads through the host: the Timeline (its notes, and posting
+# them) and the workspace's sessions (a note's addressee must be one). It
+# never reads files. Release only once chimaera's plugin trust (which
+# reads [access]) is released: an older daemon can't parse this table.
+[access]
+files = "none"
 
 [provides]
 mcp_tools = ["post_note", "read_notes"]
